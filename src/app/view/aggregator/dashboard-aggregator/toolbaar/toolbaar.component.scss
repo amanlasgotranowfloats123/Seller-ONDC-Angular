@@ -1,0 +1,54 @@
+.toolbar {
+  height: 80px;
+  // padding-top:30px;
+  background: #edf0f3;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+}
+
+.toolB {
+  display: grid;
+  grid-template-columns: 0.4fr 0.1fr 0.2fr;
+  justify-items: center;
+  align-items: center;
+}
+
+img.pic1 {
+  position: relative;
+  top: 5px;
+}
+
+span {
+  //     width: 161px;
+  // height: 22px;
+  // left: 1350px;
+  // top: 36px;
+  position: relative;
+  bottom: -9px;
+  margin-left: 4rem;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+
+  text-align: right;
+
+  color: #000000;
+}
+
+img.pic2 {
+  margin-left: 1rem;
+  border: 0.2px solid #8d8d8d;
+  border-radius: 27px;
+  padding: 7px;
+  background-color: white;
+  position: relative;
+  top: 6px;
+}
+
+.no-border:active {
+  border: 0px;
+}

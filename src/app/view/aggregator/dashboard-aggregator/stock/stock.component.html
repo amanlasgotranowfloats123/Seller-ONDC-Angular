@@ -1,0 +1,187 @@
+<div class="stockDiv" style="height: 726px">
+  <div class="topThings">
+    <span class="ins"> Usage Insights</span>
+    <!-- <span class="td">Today</span>
+      <img class="arr" src="assets/Vector 8.svg"> -->
+    <br />
+
+    <div class="all" style="display: flex">
+      <mat-card class="example-card">
+        <span class="topMsg"> Seller Allocation </span><br />
+        <span class="bottomMsg"> 134 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg"> Total Sellers </span><br />
+        <span class="bottomMsg2"> 723 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg"> Active Sellers </span><br />
+        <span class="bottomMsg2"> 271 </span>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="middle">
+    <span class="middle1"> Sellers </span>
+    <span class="middle2"> (200) </span>
+
+    <!-- <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Dropdown button
+        </button>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div> -->
+
+    <!-- <div class="dropdown"> -->
+    <button
+      style="cursor: pointer"
+      routerLink="/aggregator-dashboard/addseller"
+      class="btn1"
+      type="button"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+      mat-flat-button
+    >
+      <img class="plus" src="assets/plussign.svg" />
+      <span class="middle31"> Add Seller </span>
+    </button>
+    <!-- <ul class="dropdown-menu">
+        <li style="cursor: pointer;" routerLink="/dashboard/addproduct"  ><a class="dropdown-item" ><img style="margin-right: 1rem;" class="imgAdd" src="assets/Group 5362.svg"> <span class="ADrop">Add Manually</span></a></li>
+        <li style="cursor: pointer;"><a class="dropdown-item" > <img style="margin-right: 1rem;" class="imgAdd" src="assets/Group 772542992.svg"><span class="BDrop">Bulk Add by CSV</span></a></li>
+
+      </ul> -->
+    <!-- </div> -->
+
+    <button class="btn2" mat-flat-button>
+      <img class="high2" src="assets/Group 3479.svg" />
+      <span class="middle32"> Filter </span>
+    </button>
+
+    <button class="btn3" mat-flat-button>
+      <img class="high3" src="assets/Group.svg" />
+      <span class="middle33"> Options </span>
+      <img class="high4" src="assets/Vector 457.svg" />
+      <img class="high5" src="assets/Vector 15 (1).svg" />
+    </button>
+  </div>
+
+  <br />
+  <div class="grid">
+    <table mat-table [dataSource]="dataSource">
+      <input type="checkbox" class="marginCheckbox" />
+
+      <ng-container matColumnDef="check">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">
+            <input type="checkbox" class="marginCheckbox" />
+          </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <input type="checkbox" class="marginCheckbox" />
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="businessName">
+        <th mat-header-cell *matHeaderCellDef>
+          <span style="margin-left: 1rem" class="tableTitle"
+            >BUSINESS NAME
+          </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <img class="prodPic" src="assets/image 27.png" />
+          <span class="proInfo">{{ element.sellerBusinessName || '-' }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="contactInfo">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">CONTACT INFO </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.sellerMobileNumber || '-' }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="pinCode">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">PIN CODE </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.pinCode || '-' }}</span>
+        </td>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="orderValue">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">ORDER VALUE </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.orderValue }}</span>
+        </td>
+      </ng-container> -->
+
+      <ng-container matColumnDef="activationDate">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">ACTIVATION DATE </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.activationDate  || '-' }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">STATUS </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.status || '-' }}</span>
+        </td>
+      </ng-container>
+
+      <!-- <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">Action </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="dropdown">
+            <img
+              style="cursor: pointer"
+              class="act"
+              src="assets/Group 6265157.svg"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            />
+            <ul class="dropdown-menu">
+              <li style="cursor: pointer; border-bottom: 1px solid #f6f6f3">
+                <a class="dropdown-item"
+                  ><img
+                    class="ActionImg"
+                    src="assets/Vector (4).svg"
+                  />Delete</a
+                >
+              </li>
+
+              <li style="cursor: pointer">
+                <a class="dropdown-item"
+                  ><img
+                    class="ActionImg"
+                    src="assets/deActive.svg"
+                  />Deactive</a
+                >
+              </li>
+            </ul>
+          </div>
+        </td>
+      </ng-container> -->
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

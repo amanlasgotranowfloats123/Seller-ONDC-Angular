@@ -1,0 +1,126 @@
+<div class="company-logo">
+  <img *ngIf="logo" [src]="logo" alt="company-logo" />
+</div>
+<div class="grid">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    [showNavigationArrows]="false"
+    data-bs-ride="true"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="bannerImages[0]" alt="Random first slide" class="banner" />
+      </div>
+      <div class="carousel-item">
+        <img [src]="bannerImages[1]" alt="Random second slide" class="banner" />
+      </div>
+      <div class="carousel-item">
+        <img [src]="bannerImages[2]" alt="Random third slide" class="banner" />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div>
+    <form [formGroup]="loginForm">
+      <p class="login">Login</p>
+      <p class="pleaseEnter">Please enter your registered business number</p>
+      <p class="mobileNumber">Enter Mobile Number</p>
+      <div class="input-box">
+        <!-- <span class="prefix">+91</span> -->
+        <input
+          type="text"
+          readonly
+          [ngModel]="phoneNo"
+          name="phone"
+          formControlName="phone"
+        />
+      </div>
+      <p class="enterOTP">Enter OTP</p>
+      <div class="input-box">
+        <input type="text" name="otp" formControlName="otp" />
+        <div
+          *ngIf="
+            loginForm.get('otp')?.touched &&
+            loginForm.get('otp')?.hasError('required')
+          "
+          class="error-text"
+        >
+          <span> otp is required</span>
+        </div>
+        <div
+          *ngIf="
+            loginForm.get('otp')?.touched &&
+            loginForm.get('otp')?.hasError('minlength') &&
+            loginForm.get('otp')?.hasError('maxlength')
+          "
+          class="error-text"
+        >
+          <span> otp should be of 4 characters</span>
+        </div>
+        <span class="suffix">00:59</span>
+      </div>
+      <div style="display: flex" class="checkBoxStyle">
+        <input type="checkbox" class="marginCheckbox" />
+        <p class="keepMe">Keep me Logged in</p>
+      </div>
+      <p class="byContinuin">
+        By continuing, you agree to our <a href="/">Terms of Use</a> and
+        <a href="/">Privacy Policy</a>
+      </p>
+    </form>
+    <div class="verifyButton">
+      <button
+        class="verifOTP"
+        [disabled]="this.loginForm.get('otp')?.errors"
+        (click)="verify()"
+        [ngStyle]="{
+          'background-color': !this.loginForm.get('otp')?.errors
+            ? '#4B70F1'
+            : '#C4C4C4'
+        }"
+      >
+        Verify OTP
+      </button>
+    </div>
+  </div>
+</div>

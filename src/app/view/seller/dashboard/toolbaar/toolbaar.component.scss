@@ -1,0 +1,53 @@
+.toolbar{
+
+  width: 1292px;
+
+  height: 80px;
+
+
+// padding-top:30px;
+background: #EDF0F3;
+}
+
+img.pic1 {
+  position: relative;
+  top: 5px;
+}
+
+span{
+//     width: 161px;
+// height: 22px;
+// left: 1350px;
+// top: 36px;
+position: relative;
+bottom: -9px;
+margin-left: 4rem;
+
+font-family: 'Open Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 22px;
+
+text-align: right;
+
+color: #000000;
+}
+
+.toolB{
+  margin-left: 64rem;
+  position: relative;
+  top: 14px;
+}
+
+img.pic2 {
+  margin-left: 1rem;
+  border: 0.2px solid #8D8D8D;
+  border-radius: 27px;
+  padding: 7px;
+  background-color: white;
+  position: relative;
+  top: 6px;
+
+}
+

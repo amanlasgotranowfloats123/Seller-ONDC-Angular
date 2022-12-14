@@ -1,0 +1,39 @@
+<div class="sidenav">
+  <div class="logo">
+    <!-- <div class="logo-image">
+      <img src="assets/circle 1.svg" />
+    </div>
+
+    <div class="simple-text">Company Logo</div> -->
+    <div class="logo-image">
+      <img
+        [src]="companyLogo"
+        alt="companyLogo"
+        *ngIf="companyLogo"
+        class="company-logo"
+      />
+    </div>
+  </div>
+  <nav>
+    <ul class="nav">
+      <li
+        *ngFor="let item of sideMenu"
+        [routerLink]="item.url"
+        (click)="activeClass(item)"
+        [ngClass]="item.isActive ? 'active' : ''"
+      >
+        <span [routerLink]="item.url"
+          ><img class="iconA" [src]="item.src" />{{ item.name }}</span
+        >
+      </li>
+
+      <!-- <li class="active"><span routerLink="/dashboard/home"><img class="picture" src="assets/icons/Union.svg">Home</span></li>
+    <li class="active"><span routerLink="/dashboard/stock"><img class="picture" src="assets/icons/stock.svg">Stock</span></li>
+    <li class="active"><span routerLink="/dashboard/orders"><img class="picture" src="assets/icons/Vector.svg">Orders</span></li>
+    <li class="active"><span routerLink="/dashboard/support"><img class="picture" src="">Support</span></li> -->
+      <li class="downB">
+        <span><img class="iconA" src="assets/help.svg" />Help</span>
+      </li>
+    </ul>
+  </nav>
+</div>

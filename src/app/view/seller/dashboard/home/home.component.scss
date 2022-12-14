@@ -1,0 +1,454 @@
+.all {
+  box-sizing: border-box;
+  position: relative;
+  top: 40px;
+  width: 1200px;
+  background: #ffffff;
+  border: 1px solid #e7e8e5;
+  border-radius: 6px;
+  left: 40px;
+}
+.topThings {
+  margin-left: 38px;
+}
+span.head {
+  width: 103px;
+  height: 27px;
+  position: relative;
+  left: 18px;
+  top: 5px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+
+  color: #5d5d5a;
+}
+mat-card {
+  background: #ffffff;
+  border-radius: 4px;
+  width: 320px;
+  height: 180px;
+}
+span.topMsg {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  width: 127px;
+  height: 24px;
+
+  position: relative;
+  left: 38px;
+
+  color: #2d3964;
+}
+.card-header {
+  padding: 1rem;
+  gap: 1rem;
+}
+img.image-top1 {
+  position: relative;
+  top: 32px;
+  right: 25px;
+}
+img.image-top2 {
+  position: relative;
+  top: 5px;
+  right: 16px;
+}
+.example-card-cart {
+  /* position: absolute; */
+  width: 510px;
+  height: 179px;
+  /* left: 1026px; */
+  /* top: 236px; */
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 16%);
+  border-radius: 4px;
+}
+span.bottomMsg2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  text-transform: uppercase;
+
+  color: #2d3964;
+}
+span.bottomMsg {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: right;
+  color: #2d3964;
+}
+span.bottomMsg {
+  position: relative;
+  left: 42.5px;
+  top: 40px;
+}
+span.bottomNum {
+  width: 83px;
+  height: 68px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 68px;
+  text-align: right;
+  color: #2d3964;
+  position: absolute;
+  /* top: 26px; */
+  left: 196.5px;
+  top: 84px;
+}
+mat-card.mat-card.mat-focus-indicator.example-card {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 16%);
+  border-radius: 4px;
+}
+span.top {
+  width: 191px;
+  height: 24px;
+  position: relative;
+  left: 48px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  color: #2d3964;
+}
+img.load {
+  width: 80px;
+  height: 80px;
+
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+span.bottomMsg2 {
+  margin-left: 42px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #2d3964;
+  position: relative;
+  top: 40px;
+}
+span.number {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 28px;
+  /* identical to box height, or 117% */
+
+  position: relative;
+  left: 11px;
+
+  color: #2d3964;
+}
+span.ins {
+  width: 128px;
+  height: 33px;
+  position: relative;
+  width: 128px;
+  height: 33px;
+  bottom: 4px;
+  top: 22px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+
+  color: #333333;
+}
+
+//table Css
+
+table {
+  width: 100%;
+  height: 380px;
+
+  margin-top: 32px;
+  margin-left: 22px;
+  position: relative;
+  top: 33px;
+  border: 1px solid #eaeae8;
+  border-radius: 6px;
+}
+.tableHead {
+  box-sizing: border-box;
+  position: relative;
+  top: 48px;
+  padding-bottom: 56px;
+  background: #ffffff;
+  border: 1px solid #e7e8e5;
+  border-radius: 6px;
+  width: 882px;
+  left: 22px;
+}
+.table-head {
+  position: relative;
+  top: 33px;
+  left: 23px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+
+  color: #5d5d5a;
+}
+.grid1 {
+  margin-left: 16px;
+}
+.grid {
+  padding-right: 20px;
+}
+tr.mat-header-row.cdk-header-row.ng-star-inserted {
+  background: #eaeae8;
+}
+span.tableTitle {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1px;
+  color: #616161;
+}
+span.proInfo {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1px;
+  color: #5a7eb5;
+}
+span.proInfo2 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1px;
+  color: #5d5d5a;
+}
+span.proInfo3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* or 143% */
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1px;
+
+  color: #f38e03;
+}
+span.day {
+  position: relative;
+  top: 30px;
+  left: 566px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: right;
+  color: #54594e;
+}
+img.vector {
+  position: relative;
+  top: 1.25px;
+  left: 12.63px;
+}
+span.day1 {
+  position: relative;
+  top: 18px;
+  left: 1008px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  text-align: right;
+  color: #54594e;
+}
+mat-card.mat-card.mat-focus-indicator.example-card-top {
+  position: relative;
+  top: 49px;
+  height: 344px;
+  width: 288px;
+  left: 51px;
+}
+span.topMsg1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  color: #5d5d5a;
+  position: relative;
+  top: 12px;
+  left: 23px;
+}
+img.pic {
+  position: relative;
+  top: 45px;
+  left: 10px;
+  margin-bottom: 16px;
+}
+span.name {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  /* display: flex; */
+  align-items: center;
+  letter-spacing: 0.1px;
+  color: #5d5d5a;
+  position: relative;
+  left: 32px;
+  top: 36px;
+}
+span.order {
+  position: relative;
+  top: 37px;
+  left: 86px;
+}
+span.order {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  /* display: flex; */
+  /* align-items: center; */
+  letter-spacing: 0.1px;
+  color: #a2a49b;
+}
+button.btn3 {
+  box-sizing: border-box;
+  /* position: absolute; */
+  width: 173px;
+  height: 48px;
+  /* left: 1405px; */
+  /* top: 123px; */
+  background: #ffffff;
+  border: 1px solid #e8eae4;
+  border-radius: 9px;
+  position: relative;
+  left: 900px;
+  top: 30px;
+}
+img.high3 {
+  position: relative;
+  right: 22px;
+}
+span.middle33 {
+  position: relative;
+  right: 13px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #5d5d5a;
+}
+img.high5 {
+  position: relative;
+  left: 14px;
+}
+.example-container {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+img.lo {
+  position: relative;
+  right: 19px;
+}
+
+span.order1 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #a2a49b;
+  position: relative;
+  left: 100px;
+  top: 36px;
+}
+
+span.order2 {
+  position: relative;
+  left: 113px;
+  top: 36px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #a2a49b;
+}
+
+span.order3 {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.1px;
+  color: #a2a49b;
+  position: relative;
+  left: 106px;
+  top: 34px;
+}
+
+.all {
+  padding-right: 12px;
+}

@@ -1,0 +1,593 @@
+<div>
+  <div class="header">
+    <img src="assets/logo.svg" />
+    <div class="logo-text">Comapny Logo</div>
+  </div>
+  <div class="mainSection">
+    <div class="title-name">
+      <img style="cursor: pointer" routerLink="/" src="assets/left-arrow.svg" />
+      <div class="title-text">Registration Form</div>
+    </div>
+    <div class="formSection">
+      <form [formGroup]="sellerRegisterForm">
+        <div>
+          <div class="business">
+            <div class="owner-title">
+              <div class="title">Business Details</div>
+              <img src="assets/iicon.svg" />
+            </div>
+            <div class="cus-inpt">
+              <label>GSTIN If Applicable</label>
+              <input type="text" formControlName="gstin" maxlength="15" />
+              <p
+                class="error"
+                *ngIf="
+                  sellerRegisterForm.get('gstin')?.touched &&
+                  sellerRegisterForm.get('gstin')?.hasError('required')
+                "
+              >
+                GST number is required
+              </p>
+              <p
+                class="error"
+                *ngIf="
+                  sellerRegisterForm.get('gstin')?.touched &&
+                  sellerRegisterForm.get('gstin')?.errors?.pattern
+                "
+              ></p>
+            </div>
+
+            <div class="cus-inpt">
+              <label>Legal Entity Name/ Business Name (as per GSTN)</label>
+              <input type="text" formControlName="businessName" />
+              <p
+                class="error"
+                *ngIf="
+                  sellerRegisterForm.get('businessName')?.touched &&
+                  sellerRegisterForm
+                    .get('businessName')
+                    ?.hasError('required')
+                "
+              >
+                Business name is required
+              </p>
+            </div>
+            <div class="oneline">
+              <div class="cus-inpt">
+                <label>PAN Card</label>
+                <input type="text" formControlName="pan" maxlength="10" />
+                <p
+                  class="error"
+                  *ngIf="
+                    sellerRegisterForm.get('pan')?.touched &&
+                    sellerRegisterForm.get('pan')?.hasError('required')
+                  "
+                >
+                  PAN is required
+                </p>
+                <p
+                  class="error"
+                  *ngIf="
+                    sellerRegisterForm.get('pan')?.touched &&
+                    sellerRegisterForm.get('pan')?.errors?.pattern
+                  "
+                >
+                  Invalid PAN
+                </p>
+              </div>
+              <div class="cus-inpt">
+                <label>Name on PAN Card</label>
+                <input type="text" formControlName="nameOnPan" />
+                <p
+                  class="error"
+                  *ngIf="
+                    sellerRegisterForm.get('nameOnPan')?.touched &&
+                    sellerRegisterForm
+                      .get('nameOnPan')
+                      ?.hasError('required')
+                  "
+                >
+                  Name is required
+                </p>
+              </div>
+              <div class="cus-inpt">
+                <label>Date of incorporation/Date of Birth</label>
+                <input
+                  formControlName="panDateOfIncorporation"
+                  type="date"
+                  style="height: 50px; padding: 0 10px !important"
+                  [max]="getToday()"
+                />
+                <p
+                  class="error"
+                  *ngIf="
+                    sellerRegisterForm.get('panDateOfIncorporation')
+                      ?.touched &&
+                    sellerRegisterForm
+                      .get('panDateOfIncorporation')
+                      ?.hasError('required')
+                  "
+                >
+                  Date is required
+                </p>
+              </div>
+            </div>
+            <div class="cus-inpt">
+              <label
+                >Registered Business Address
+                <span class="new-head">(primary place of business)</span></label
+              >
+              <input type="text" formControlName="registeredBusinessAddress" />
+              <p
+                class="error"
+                *ngIf="
+                  sellerRegisterForm.get('registeredBusinessAddress')
+                    ?.touched &&
+                  sellerRegisterForm
+                    .get('registeredBusinessAddress')
+                    ?.hasError('required')
+                "
+              >
+                Registered business address is required
+              </p>
+            </div>
+            <div class="cus-inpt">
+              <div>
+                <label
+                  >Store Address
+                  <span class="new-head"
+                    >(primary place of business)</span
+                  ></label
+                >
+                <span class="example">
+                  <label class="checkbox-button">
+                    <input
+                      type="checkbox"
+                      class="checkbox-button__input"
+                      id="choice1-1"
+                      name="choice1"
+                      (change)="setAddress($event)"
+                    />
+                    <span class="checkbox-button__control"></span>
+                    <span class="checkbox-button__label"
+                      >Same as Registered Business Address</span
+                    >
+                  </label>
+                </span>
+              </div>
+              <input type="text" formControlName="storeAddress" />
+            </div>
+            <div class="cus-inpt">
+              <p
+                class="error"
+                *ngIf="
+                  sellerRegisterForm.get('storeAddress')?.touched &&
+                  sellerRegisterForm
+                    .get('storeAddress')
+                    ?.hasError('required')
+                "
+              >
+                Registered business address is required
+              </p>
+              <div>
+                <label
+                  >Store Location
+                  <span class="new-head">(Drop pin on map)</span></label
+                >
+              </div>
+              <div>
+                <button mat-stroked-button class="location-btn" (click)="getLocation()">
+                  <mat-icon style="color: #4b70f1">location_on</mat-icon>
+                  <span>Verify location</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="box-area">
+              <div class="cus-inpt">
+                <label>Store Logo</label>
+                <div class="box">
+                  <input
+                    class="box"
+                    type="file"
+                    id="fileInput"
+                    name="fileInput"
+                    accept="image/*"
+                    (change)="selectFiles($event, 'storelogo')"
+                  />
+                  <img
+                    *ngIf="
+                      sellerRegisterForm.get('storeLogoPreview')?.value
+                    "
+                    [src]="
+                      sellerRegisterForm.get('storeLogoPreview')?.value
+                    "
+                  />
+                  <div
+                    class="box-text"
+                    style="z-index: 1"
+                    *ngIf="
+                      sellerRegisterForm.get('storeLogoPreview')?.value
+                    "
+                  >
+                    Add Image
+                  </div>
+                </div>
+              </div>
+              <div class="cus-inpt">
+                <label>Store Images</label>
+                <div style="display: flex">
+                  <div class="box cus-box">
+                    <div class="box">
+                      <input
+                        class="box"
+                        type="file"
+                        id="fileInput"
+                        name="fileInput"
+                        accept="image/*"
+                        (change)="selectFiles($event, 'not')"
+                      />
+
+                      <div class="box-text" style="z-index: 1">
+                        <svg
+                          class="cus-svg"
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M8.56761 6.4533C8.56761 6.53614 8.63477 6.6033 8.71761 6.6033H13.8689C14.4571 6.6033 14.9077 7.03145 14.9077 7.52885C14.9077 8.02624 14.4571 8.4544 13.8689 8.4544H8.71761C8.63477 8.4544 8.56761 8.52155 8.56761 8.6044V13.9821C8.56761 14.4795 8.11702 14.9077 7.52885 14.9077C6.94067 14.9077 6.49008 14.4795 6.49008 13.9821V8.6044C6.49008 8.52155 6.42292 8.4544 6.34008 8.4544H1.18877C0.600594 8.4544 0.15 8.02624 0.15 7.52885C0.15 7.03145 0.600594 6.6033 1.18877 6.6033H6.34008C6.42292 6.6033 6.49008 6.53614 6.49008 6.4533V1.07555C6.49008 0.578154 6.94067 0.15 7.52885 0.15C8.11702 0.15 8.56761 0.578154 8.56761 1.07555V6.4533Z"
+                            fill="black"
+                            stroke="white"
+                            stroke-width="0.3"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div *ngFor="let preview of previews">
+                    <div class="box cus-box" *ngIf="preview">
+                      <img [src]="preview" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cus-inpt">
+              <label>Do you sell F&B products?</label>
+              <mat-radio-group
+                [color]="color"
+                aria-label="Select an option"
+                formControlName="isAlreadyONDCRegistered"
+                formControlName="isAlreadyONDCRegistered"
+              >
+                <mat-radio-button value="true">Yes</mat-radio-button>
+                <mat-radio-button value="false">No</mat-radio-button>
+              </mat-radio-group>
+            </div>
+          </div>
+          <div class="orderDelivery">
+            <div class="owner-title">
+              <div class="title">Category</div>
+              <img src="assets/iicon.svg" />
+            </div>
+            <div class="cus-inpt">
+              <label>Select the category</label>
+              <select class="dropDown">
+                <option>Other</option>
+                <option>Option 1</option>
+              </select>
+            </div>
+          </div>
+          <div class="orderDelivery">
+            <div class="owner-title">
+              <div class="title">Order & Delivery</div>
+              <img src="assets/iicon.svg" />
+            </div>
+            <div class="timeShip">
+              <label
+                >Time to Ship Order:&nbsp;
+                <p>{{ sellerRegisterForm.get("timeToShip")?.value }}</p>
+                &nbsp;
+                <p *ngIf="sellerRegisterForm.get('timeToShip')?.value == 1">
+                  Hour
+                </p>
+                <p *ngIf="sellerRegisterForm.get('timeToShip')?.value > 1">
+                  Hours
+                </p>
+              </label>
+              <mat-slider
+                class="example-margin"
+                [disabled]="false"
+                [invert]="false"
+                [max]="24"
+                [min]="1"
+                [step]="1"
+                [thumbLabel]="true"
+                [vertical]="false"
+                aria-labelledby="example-name-label"
+                formControlName="timeToShip"
+              >
+              </mat-slider>
+            </div>
+            <div class="deliveryCharge">
+              <label
+                >Delivery Charge per KM:&nbsp;
+                <p>
+                  {{ sellerRegisterForm.get("deliveryCharge")?.value }} INR
+                </p>
+              </label>
+              <mat-slider
+                class="example-margin"
+                [disabled]="false"
+                [invert]="false"
+                [max]="20"
+                [min]="0"
+                [step]="2"
+                [thumbLabel]="true"
+                [vertical]="false"
+                aria-labelledby="example-name-label"
+                formControlName="deliveryCharge"
+              >
+              </mat-slider>
+            </div>
+            <div class="deliveryCharge">
+              <label
+                >Max Delivery Radius:&nbsp;
+                <p>
+                  {{ sellerRegisterForm.get("maxDeliveryRadius")?.value }}
+                  km
+                </p>
+              </label>
+              <mat-slider
+                class="example-margin"
+                [disabled]="false"
+                [invert]="false"
+                [max]="50"
+                [min]="5"
+                [step]="5"
+                [thumbLabel]="true"
+                [vertical]="false"
+                aria-labelledby="example-name-label"
+                formControlName="maxDeliveryRadius"
+              >
+              </mat-slider>
+            </div>
+            <div class="deliveryCharge">
+              <label
+                >Max Return Window:&nbsp;
+                <p>
+                  {{ sellerRegisterForm.get("maxReturnWindow")?.value }}
+                </p>
+                &nbsp;
+                <p
+                  *ngIf="
+                    sellerRegisterForm.get('maxReturnWindow')?.value == 1
+                  "
+                >
+                  Day
+                </p>
+                <p
+                  *ngIf="
+                    sellerRegisterForm.get('maxReturnWindow')?.value > 1
+                  "
+                >
+                  Days
+                </p>
+              </label>
+              <mat-slider
+                class="example-margin"
+                [disabled]="false"
+                [invert]="false"
+                [max]="10"
+                [min]="1"
+                [step]="1"
+                [thumbLabel]="true"
+                [vertical]="false"
+                aria-labelledby="example-name-label"
+                formControlName="maxReturnWindow"
+              >
+              </mat-slider>
+            </div>
+            <div style="display: flex" class="checkBoxStyle">
+              <input
+                type="checkbox"
+                class="marginCheckbox"
+                formControlName="isAutoAcceptEnabled"
+              />
+              <p class="keepMe">Auto-accept all the orders</p>
+            </div>
+          </div>
+          <div class="settelment">
+            <div class="owner-title">
+              <div class="title">Settlement</div>
+              <img src="assets/iicon.svg" />
+            </div>
+            <div class="timeShip">
+              <label
+                >Max Settlement Window:&nbsp;
+                <p>
+                  {{
+                    sellerRegisterForm.get("maxSettlementWindow")?.value
+                  }}+2 Days
+                </p>
+              </label>
+              <mat-slider
+                class="example-margin"
+                [disabled]="false"
+                [invert]="false"
+                [max]="10"
+                [min]="1"
+                [step]="1"
+                [thumbLabel]="true"
+                [vertical]="false"
+                aria-labelledby="example-name-label"
+                formControlName="maxSettlementWindow"
+              >
+              </mat-slider>
+            </div>
+            <div class="cus-inpt">
+              <label>Allowed Settlement Type</label>
+              <mat-radio-group
+                [color]="color"
+                aria-label="Select an option"
+                formControlName="settlementType"
+                aria-checked="true"
+              >
+                <mat-radio-button value="NEFT">NEFT</mat-radio-button>
+                <mat-radio-button value="UPI">UPI</mat-radio-button>
+              </mat-radio-group>
+            </div>
+
+            <!-- UPI -->
+            <div
+              *ngIf="
+                sellerRegisterForm.get('settlementType')?.value === 'UPI'
+              "
+              formGroupName="upiDetails"
+            >
+              <div class="cus-inpt">
+                <label>Settlement VPA ID</label>
+                <input type="text" formControlName="vpa" />
+                <p
+                  class="error"
+                  *ngIf="vpa?.touched && vpa?.hasError('required')"
+                >
+                  VPA ID is required
+                </p>
+                <p class="error" *ngIf="vpa?.touched && vpa?.errors?.pattern">
+                  Invalid VPA ID
+                </p>
+              </div>
+
+              <div class="cus-inpt">
+                <label>Name</label>
+                <input type="text" formControlName="name" />
+                <p
+                  class="error"
+                  *ngIf="vpaName?.touched && vpaName?.hasError('required')"
+                >
+                  Name is required
+                </p>
+              </div>
+            </div>
+            <!-- NEFT -->
+            <div
+              *ngIf="
+                sellerRegisterForm.get('settlementType')?.value === 'NEFT'
+              "
+              formGroupName="bankDetails"
+            >
+              <div class="cus-inpt">
+                <label>Account Name</label>
+                <input type="text" formControlName="accountName" />
+                <p
+                  class="error"
+                  *ngIf="AccName?.touched && AccName?.hasError('required')"
+                >
+                  Beneficiary name is required
+                </p>
+              </div>
+
+              <div class="cus-inpt">
+                <label>Account Type</label>
+                <mat-radio-group
+                  [color]="color"
+                  aria-label="Select an option"
+                  formControlName="accountType"
+                  aria-checked="true"
+                >
+                  <mat-radio-button value="SAVINGS">SAVINGS</mat-radio-button>
+                  <mat-radio-button value="CURRENT">CURRENT</mat-radio-button>
+                </mat-radio-group>
+              </div>
+
+              <div class="cus-inpt">
+                <label>Account Number</label>
+                <input type="text" formControlName="accountNumber" />
+                <p
+                  class="error"
+                  *ngIf="AccNumber?.touched && AccNumber?.hasError('required')"
+                >
+                  Beneficiary account number is required
+                </p>
+              </div>
+
+              <div class="cus-inpt">
+                <label>IFSC Code</label>
+                <input type="text" formControlName="ifscCode" />
+                <p
+                  class="error"
+                  *ngIf="
+                    getifscCode?.touched && getifscCode?.hasError('required')
+                  "
+                >
+                  IFSC Code is required
+                </p>
+              </div>
+            </div>
+
+            <div class="timeShip">
+              <label
+                >Max % of withholding amount for returns:&nbsp;
+                <p
+                  *ngIf="
+                    sellerRegisterForm.get('maxWithholdingAmount')?.value
+                  "
+                >
+                  {{
+                    sellerRegisterForm.get("maxWithholdingAmount")?.value
+                  }}
+                  %
+                </p>
+              </label>
+              <mat-slider
+                class="example-margin"
+                [disabled]="false"
+                [invert]="false"
+                [max]="100"
+                [min]="0"
+                [step]="10"
+                [thumbLabel]="true"
+                [vertical]="false"
+                aria-labelledby="example-name-label"
+                formControlName="maxWithholdingAmount"
+              >
+              </mat-slider>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <div>
+      <div class="footer-text">
+        Complete your to register yourself into ONDC
+      </div>
+    </div>
+    <div class="actions">
+      <button class="can-btn" routerLink="/dashboard/home">Cancel</button>
+      <button class="save-btn" (click)="saveProgress()">Save Progress</button>
+      <button
+        class="pcd-btn"
+        (click)="submitForm()"
+        [ngStyle]="{
+          'background-color':
+            this.sellerRegisterForm.invalid ||
+            this.sellerRegisterForm.get('agreetoTerms')?.value == false
+              ? '#C4C4C4'
+              : '#4B70F1'
+        }"
+      >
+        Save & Proceed
+      </button>
+    </div>
+  </div>
+</div>

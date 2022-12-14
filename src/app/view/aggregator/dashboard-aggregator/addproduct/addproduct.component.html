@@ -1,0 +1,250 @@
+<!-- <div class="row" style="height: 834px;"> -->
+<div class="top-sec" style="display: flex">
+  <img
+    class="arrow1"
+    style="cursor: pointer"
+    routerLink="/aggregator-dashboard/manage-seller"
+    src="assets/left-arrow.svg"
+  />
+  <div class="title-text">Adds Seller</div>
+</div>
+
+<form class="mainForm" [formGroup]="addSellerFormGroup">
+  <div class="form-inner-btn-grp">
+    <button class="btnFirst" mat-flat-button>Cancel</button>
+    <button class="btn1" mat-flat-button (click)="submitForm()">
+      <span class="buttonA">Send Request</span>
+    </button>
+  </div>
+  <div class="cus-inpt">
+    <label>General Details</label>
+  </div>
+
+  <div class="cus-inpt">
+    <span class="fontsA">Seller Business Name *</span>
+    <input type="text" formControlName="sellerBusinessName" />
+    <span
+      class="error-grp"
+      *ngIf="getBusiness?.touched && getBusiness?.hasError('required')"
+      >Seller business name is required</span
+    >
+  </div>
+
+  <div class="cus-inpt">
+    <span class="fontsA">Seller Name *</span>
+    <input type="text" formControlName="sellerName" />
+    <span
+      class="error-grp"
+      *ngIf="getName?.touched && getName?.hasError('required')"
+      >Seller name is required</span
+    >
+  </div>
+
+  <div class="cus-inpt">
+    <span class="fontsA">Mobile No *</span>
+    <input type="text" formControlName="sellerMobileNumber" maxlength="13" />
+    <span
+      class="error-grp"
+      *ngIf="getMobile?.touched && getMobile?.hasError('required')"
+      >Mobile number is required</span
+    >
+    <span
+      class="error-grp"
+      *ngIf="getMobile?.touched && getMobile?.hasError('minLength')"
+      >Invalid mobile number</span
+    >
+  </div>
+
+  <div class="cus-inpt">
+    <span class="fontsA">Email Address *</span>
+    <input type="text" formControlName="sellerEmail" />
+    <span
+      class="error-grp"
+      *ngIf="getEmail?.touched && getEmail?.hasError('required')"
+      >Email is required</span
+    >
+    <span
+      class="error-grp"
+      *ngIf="getEmail?.touched && getEmail?.hasError('email')"
+      >Invalid email</span
+    >
+  </div>
+
+  <!-- <div class="cus-inpt">
+    <span class="fontsA">Category *</span>
+    <select  class="dropDown">
+        <option>Other</option>
+        <option>Option 1</option>
+    </select>
+</div>
+<div style="display:flex">
+<div class="cus2-inpt">
+
+  <span class="fontsA">Selling Price *</span>
+
+  <input  type="text" />
+  </div>
+
+
+<div class="cus3-inpt">
+  <span class="fontsA">GST Percentage *</span>
+
+  <select  class="dropDown">
+    <option>18%</option>
+    <option>Option 1</option>
+</select>
+  </div>
+</div>
+
+<div style="display:flex">
+  <div class="cus2-inpt">
+    <span class="fontsA">Discounted Price</span>
+
+    <input  type="text" />
+    </div>
+
+
+  <div class="cus3-inpt">
+    <span class="fontsA">Discount % </span>
+
+   <input type="text">
+    </div>
+  </div>
+
+
+
+  <div style="display:flex">
+    <div class="cus2-inpt">
+      <span class="fontsA">Stock Quantity *</span>
+
+      <input  type="text" />
+      </div>
+
+
+    <div class="cus3-inpt">
+      <span class="fontsA">Units</span>
+
+      <select  class="dropDown">
+        <option >Pcs</option>
+        <option>Option 1</option>
+    </select>
+      </div>
+ </div>
+
+<br>
+ <div class="cus-inpt">
+  <label>Images</label>
+  <div style="display: flex">
+      <div class="box cus-box">
+          <div class="box-text">Add Image</div>
+      </div>
+      <div class="box cus-box">
+          <div class="box-text">
+              <svg class="cus-svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M8.56761 6.4533C8.56761 6.53614 8.63477 6.6033 8.71761 6.6033H13.8689C14.4571 6.6033 14.9077 7.03145 14.9077 7.52885C14.9077 8.02624 14.4571 8.4544 13.8689 8.4544H8.71761C8.63477 8.4544 8.56761 8.52155 8.56761 8.6044V13.9821C8.56761 14.4795 8.11702 14.9077 7.52885 14.9077C6.94067 14.9077 6.49008 14.4795 6.49008 13.9821V8.6044C6.49008 8.52155 6.42292 8.4544 6.34008 8.4544H1.18877C0.600594 8.4544 0.15 8.02624 0.15 7.52885C0.15 7.03145 0.600594 6.6033 1.18877 6.6033H6.34008C6.42292 6.6033 6.49008 6.53614 6.49008 6.4533V1.07555C6.49008 0.578154 6.94067 0.15 7.52885 0.15C8.11702 0.15 8.56761 0.578154 8.56761 1.07555V6.4533Z"
+                      fill="black" stroke="white" stroke-width="0.3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+          </div>
+      </div>
+      <div class="box cus-box">
+          <div class="box-text">
+              <svg class="cus-svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                      d="M8.56761 6.4533C8.56761 6.53614 8.63477 6.6033 8.71761 6.6033H13.8689C14.4571 6.6033 14.9077 7.03145 14.9077 7.52885C14.9077 8.02624 14.4571 8.4544 13.8689 8.4544H8.71761C8.63477 8.4544 8.56761 8.52155 8.56761 8.6044V13.9821C8.56761 14.4795 8.11702 14.9077 7.52885 14.9077C6.94067 14.9077 6.49008 14.4795 6.49008 13.9821V8.6044C6.49008 8.52155 6.42292 8.4544 6.34008 8.4544H1.18877C0.600594 8.4544 0.15 8.02624 0.15 7.52885C0.15 7.03145 0.600594 6.6033 1.18877 6.6033H6.34008C6.42292 6.6033 6.49008 6.53614 6.49008 6.4533V1.07555C6.49008 0.578154 6.94067 0.15 7.52885 0.15C8.11702 0.15 8.56761 0.578154 8.56761 1.07555V6.4533Z"
+                      fill="black" stroke="white" stroke-width="0.3"
+                      stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+          </div>
+      </div>
+      <div class="box cus-box">
+        <div class="box-text">
+            <svg class="cus-svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M8.56761 6.4533C8.56761 6.53614 8.63477 6.6033 8.71761 6.6033H13.8689C14.4571 6.6033 14.9077 7.03145 14.9077 7.52885C14.9077 8.02624 14.4571 8.4544 13.8689 8.4544H8.71761C8.63477 8.4544 8.56761 8.52155 8.56761 8.6044V13.9821C8.56761 14.4795 8.11702 14.9077 7.52885 14.9077C6.94067 14.9077 6.49008 14.4795 6.49008 13.9821V8.6044C6.49008 8.52155 6.42292 8.4544 6.34008 8.4544H1.18877C0.600594 8.4544 0.15 8.02624 0.15 7.52885C0.15 7.03145 0.600594 6.6033 1.18877 6.6033H6.34008C6.42292 6.6033 6.49008 6.53614 6.49008 6.4533V1.07555C6.49008 0.578154 6.94067 0.15 7.52885 0.15C8.11702 0.15 8.56761 0.578154 8.56761 1.07555V6.4533Z"
+                    fill="black" stroke="white" stroke-width="0.3"
+                    stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+        </div>
+    </div>
+    <div class="box cus-box">
+      <div class="box-text">
+          <svg class="cus-svg" width="16" height="16" viewBox="0 0 16 16" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M8.56761 6.4533C8.56761 6.53614 8.63477 6.6033 8.71761 6.6033H13.8689C14.4571 6.6033 14.9077 7.03145 14.9077 7.52885C14.9077 8.02624 14.4571 8.4544 13.8689 8.4544H8.71761C8.63477 8.4544 8.56761 8.52155 8.56761 8.6044V13.9821C8.56761 14.4795 8.11702 14.9077 7.52885 14.9077C6.94067 14.9077 6.49008 14.4795 6.49008 13.9821V8.6044C6.49008 8.52155 6.42292 8.4544 6.34008 8.4544H1.18877C0.600594 8.4544 0.15 8.02624 0.15 7.52885C0.15 7.03145 0.600594 6.6033 1.18877 6.6033H6.34008C6.42292 6.6033 6.49008 6.53614 6.49008 6.4533V1.07555C6.49008 0.578154 6.94067 0.15 7.52885 0.15C8.11702 0.15 8.56761 0.578154 8.56761 1.07555V6.4533Z"
+                  fill="black" stroke="white" stroke-width="0.3"
+                  stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+      </div>
+  </div>
+
+
+
+
+
+</div>
+<br>
+
+
+ </div>
+ <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel-header>
+      <mat-panel-title>
+        <div style="margin-left:-18px" class="cus-inpt">
+          <label> Additional Details</label>
+        </div>
+
+      </mat-panel-title>
+
+  </mat-expansion-panel-header>
+  <p>Hey this is sample details</p>
+</mat-expansion-panel>
+
+
+<div class="cus-inpt">
+  <label>VARIENTS</label>
+</div>
+
+<div style="display:flex">
+
+  <div class="cus8-inpt">
+
+    <select class="dropDown">
+      <option>Color</option>
+      <option>Option 1</option>
+  </select>
+    </div>
+  <div class="cus7-inpt">
+
+    <input  value="Black" type="text" />
+    </div>
+  </div>
+
+
+  <div style="display:flex">
+
+    <div class="cus8-inpt">
+
+      <select style="color: #848484 ;" class="dropDown">
+        <option >Example:Black</option>
+        <option>Option 1</option>
+    </select>
+      </div>
+    <div class="cus7-inpt">
+
+      <input style="color: #848484 ;" value="Black" type="text" />
+      </div>
+    </div>
+ -->
+  <div class="form-inner-btn-grp">
+    <button class="btnFirst" mat-flat-button>Cancel</button>
+    <button class="btn1" mat-flat-button (click)="submitForm()">
+      <span class="buttonA">Send Request</span>
+    </button>
+  </div>
+</form>

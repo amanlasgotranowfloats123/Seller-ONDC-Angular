@@ -1,0 +1,495 @@
+.header {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0 18px 50px;
+
+  .logo-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 102.1%;
+    color: #575b5f;
+    width: 83px;
+    height: 36px;
+    padding: 10px 0px 0px 10px;
+  }
+}
+
+.footer {
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 29px 0 18px 56px;
+  align-items: center;
+  justify-content: space-between;
+
+  .footer-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 100%;
+    color: #a2a49b;
+  }
+}
+
+.can-btn {
+  background: none;
+  border: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  color: #5d5d5a;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #ffffff;
+  border: 1px solid #4b70f1;
+  border-radius: 25px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #4b70f1;
+  padding: 16px 30px;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.pcd-btn {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  background: #4b70f1;
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 16.5px 29px;
+  border: none;
+  margin-left: 28px;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.mainSection {
+  .title-name {
+    display: flex;
+    flex-direction: row;
+    padding-left: 80px;
+    padding-top: 48px;
+  }
+}
+
+.title-text {
+  padding-left: 18px;
+
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333333;
+}
+
+.formSection {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 1120px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin: 50px 160px 100px 160px;
+}
+
+.title {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: #4a4a4a;
+  padding-right: 16px;
+}
+
+.owner-title {
+  display: flex;
+  padding: 24px 0px 24px 40px;
+  background: #edf0f3;
+}
+
+.cus-inpt {
+  padding: 24px 40px 24px 40px;
+  display: grid;
+  grid-template-rows: 0.2fr 1fr 0.2fr;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+    padding-bottom: 8px;
+  }
+
+  input[type="text"] {
+    border: 0.3px solid #848484;
+    border-radius: 4px;
+    height: 48px;
+    padding: 0 10px;
+  }
+}
+
+.cus-switch {
+  display: flex;
+  margin-top: -6px;
+}
+
+.oneline {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.lbl {
+  margin-right: 40px;
+  margin-top: 6px;
+}
+
+.box-area {
+  display: flex;
+}
+
+.cus-box {
+  margin-right: 15px;
+}
+
+.box {
+  background: #edf0f3;
+  border-radius: 8px;
+  width: 119px;
+  height: 119px;
+
+  .box-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+    padding: 41px 33px 40px 32px;
+  }
+}
+
+.box img {
+  width: 119px;
+  height: 119px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+.panel {
+  padding: 40px 40px 0px 40px;
+}
+.cus-svg {
+  margin-top: 12px;
+}
+::ng-deep .panel .mat-expansion-panel-header {
+  background: #edf0f3;
+}
+::ng-deep .panel .mat-expanded .mat-expansion-panel-header {
+  background: #dce2e8 !important;
+  height: 48px;
+}
+::ng-deep .panel .mat-expansion-panel {
+  margin: 0 !important;
+  margin-bottom: 8px !important;
+  box-shadow: 0 0 0;
+}
+::ng-deep .panel .mat-expansion-panel-content {
+  border: 1px solid #dce2e8;
+  border-radius: 4px;
+}
+::ng-deep .panel .mat-expansion-panel-content .mat-expansion-panel-body {
+  padding: 16px 24px !important;
+}
+
+// mat-expanded
+
+label p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: black;
+}
+
+.timeShip {
+  padding: 24px 40px 24px 40px;
+  display: grid;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #848484;
+    display: flex;
+  }
+}
+
+.deliveryCharge {
+  padding: 24px 40px 24px 40px;
+  display: grid;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #848484;
+    display: flex;
+  }
+}
+
+.example-margin {
+  margin: 8px;
+  color: #4b70f1;
+}
+
+.keepMe {
+  margin-top: 12px;
+  margin-left: 11px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5d5d5a;
+}
+
+.checkBoxStyle {
+  display: flex;
+  margin-left: 41px;
+}
+
+.checkBoxStyle1 {
+  display: grid;
+  margin-left: 41px;
+}
+
+.marginCheckbox {
+  border: #4b70f1;
+}
+
+.dropDown {
+  border: 0.3px solid #848484;
+  border-radius: 4px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #2b2b2b;
+}
+
+select option {
+  border: 0.3px solid #848484;
+  border-radius: 4px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #2b2b2b;
+}
+
+::ng-deep .mat-radio-label-content {
+  color: #5d5d5a !important;
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #5d5d5a;
+  padding-top: 10px;
+  padding-right: 25px;
+}
+
+.example {
+  float: right;
+
+  .checkbox-button__label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    /* identical to box height */
+
+    color: #5d5d5a;
+  }
+
+  .checkbox-button {
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  input {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 11px 23px;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0;
+    outline: 0;
+    background-color: transparent;
+  }
+
+  .checkbox-button__input {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .checkbox-button__control {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    vertical-align: middle;
+    background-color: inherit;
+    color: #017b5f;
+    border: 2px solid #666;
+  }
+
+  .checkbox-button__input:checked + .checkbox-button__control:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 8px;
+    height: 8px;
+    background-color: #4b70f1;
+  }
+
+  .checkbox-button__input:checked + .checkbox-button__control {
+    border-color: #4b70f1;
+  }
+
+  .checkbox-button__control {
+    transform: scale(0.75);
+  }
+}
+
+// for switch
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 26px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 24px;
+  left: 7px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #4b70f1;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+span.new-head {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 19px;
+  color: #525252;
+}
+
+input[type="file"] {
+  background-color: #017b5f;
+  opacity: 0;
+  z-index: -1;
+  position: absolute;
+  z-index: 0;
+}
+
+.error {
+  font-family: "Open Sans";
+  font-size: 12px;
+  color: red !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}

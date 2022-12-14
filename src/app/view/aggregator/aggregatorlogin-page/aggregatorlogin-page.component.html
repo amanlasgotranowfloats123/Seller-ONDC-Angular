@@ -1,0 +1,131 @@
+<div class="company-logo">
+  <img *ngIf="logo" [src]="logo" alt="company-logo" />
+</div>
+<div class="grid">
+  <div
+    id="carouselExampleIndicators"
+    class="carousel slide"
+    [showNavigationArrows]="false"
+    data-bs-ride="true"
+  >
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="bannerImages[0]" alt="Random first slide" class="banner" />
+      </div>
+      <div class="carousel-item">
+        <img [src]="bannerImages[1]" alt="Random second slide" class="banner" />
+      </div>
+      <div class="carousel-item">
+        <img [src]="bannerImages[2]" alt="Random third slide" class="banner" />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div>
+    <p class="login">Admin Login</p>
+    <p class="pleaseEnter">Please enter your Admin Id</p>
+    <form [formGroup]="loginForm">
+      <p class="mobileNumber">Enter Your Id</p>
+      <div class="input-box danger-alert">
+        <!-- <span class="prefix">+91</span> -->
+        <input type="text" formControlName="email" [class]="'error-box'" />
+      </div>
+      <div
+        *ngIf="
+          loginForm.get('email')?.touched &&
+          loginForm.get('email')?.hasError('required')
+        "
+        class="error-text"
+      >
+        <span> Email is a required field </span>
+      </div>
+      <div
+        *ngIf="
+          loginForm.get('email')?.touched &&
+          loginForm.get('email')?.hasError('email')
+        "
+        class="error-text"
+      >
+        <span> Invalid email</span>
+      </div>
+      <p class="enterOTP">Password</p>
+      <div class="input-box">
+        <input type="password" formControlName="password" />
+        <!-- <span class="suffix">00:59</span> -->
+      </div>
+      <div
+        *ngIf="
+          loginForm.get('password')?.touched &&
+          loginForm.get('password')?.hasError('required')
+        "
+        class="error-text"
+      >
+        <span> Password is required</span>
+      </div>
+      <div
+        *ngIf="
+          loginForm.get('password')?.touched &&
+          loginForm.get('password')?.hasError('minlength')
+        "
+        class="error-text"
+      >
+        <span> Password should be > 6 characters</span>
+      </div>
+    </form>
+    <br />
+    <div class="verifyButton">
+      <button
+        class="verifOTP"
+        (click)="submitForm()"
+        [ngStyle]="{
+          'background-color':
+            !this.loginForm.get('password')?.errors &&
+            !this.loginForm.get('email')?.errors
+              ? '#4B70F1'
+              : '#C4C4C4'
+        }"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,252 @@
+
+span.head {
+  position: relative;
+  top: 36px;
+  left: 30px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333333;
+}
+button.btn {
+  position: relative;
+  left: 1106px;
+  width: 175px;
+    height: 48px;
+    background: #4B70F1;
+    border-radius: 9px;
+    border-color: #4B70F1;
+}
+
+.table {
+  box-sizing: border-box;
+  position: relative;
+    height: 550px;
+    width: 450px;
+    // z-index: 1;
+    left: 38px;
+  background: #FCFCFC;
+  border: 1px solid #E7E8E5;
+  border-radius: 6px 0px 0px 6px;
+  padding: 0px;
+}
+span.top {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: #616161;
+  position: relative;
+  top: 20px;
+  left: 12px;
+}
+
+span.number {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D2D2D;
+  position: relative;
+  top: 40px;
+  left: 6px;
+}
+span.order {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #2D2D2D;
+  position: relative;
+
+  top: 41px;
+  left: 8px;
+}
+span.date {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  position: relative;
+  top: 42px;
+  color: #979797;
+  left: 130px;
+}
+span.state {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #979797;
+  position: relative;
+  top: 42px;
+  left: 14px;
+}
+.text {
+
+  border-bottom: 1px solid #D7D7D2;
+
+}
+.header {
+  margin-top: 12px;
+  height: 113px;
+}
+span.middle {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+
+  .side-card {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #E7E8E5;
+    width: 39rem;
+    margin-left: 37px;
+    height: 550px;
+    padding-left: 1rem;
+    padding-top: 2rem;
+}
+span.sub {
+
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  position: relative;
+  left: 18px;
+  bottom: 10px;
+}
+span.Lorem {
+  position: relative;
+  bottom: 10px;
+  left: 24px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-size: 16px;
+  line-height: 20px;
+}
+.dates {
+  position: relative;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: right;
+  color: #979797;
+  left: 212px;
+}
+.top-head {
+  position: relative;
+  left: 64px;
+  bottom: 24px;
+}
+span.help {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #616161;
+}
+span.support {
+  font-family: 'Open Sans';
+  font-style: normal;
+  /* font-weight: 300; */
+  font-size: 12px;
+  line-height: 20px;
+  /* color: #616161; */
+}
+.wordlength {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #616161;
+  position: relative;
+  left: 64px;
+  width: 532px;
+  border-bottom: 1px solid #D7D7D2;
+  padding-bottom: 46px;
+}
+.table-head {
+  margin-bottom: 8rem;
+  margin-top: 4rem;
+}
+span.inner {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #A2A49B;
+  position: relative;
+  right: 32px;
+}
+.table-start {
+  box-sizing: border-box;
+  background: #FCFCFC;
+  border: 1px solid #E7E8E5;
+  border-radius: 6px 0px 0px 0px;
+  position: relative;
+  left: 39px;
+  width: 174px;
+  height: 550px;
+}
+span.tip {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #616161;
+  position: relative;
+  top: 20px;
+  left: 16px;
+}
+.categories {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #616161;
+  position: relative;
+  top: 40px;
+  left: 21px;
+  margin-bottom: 41px;
+}
+span.category {
+  position: relative;
+  left: 12px;
+  top: 1px;
+}
+.color {
+  height: 61px;
+
+  background: #EDF1FE;
+  position: relative;
+  right: 21px;
+  padding-left: 21px;
+  padding-top: 10px;
+}
+img.search-icon {
+  position: relative;
+  left: 521px;
+  top: 28px;
+}
+

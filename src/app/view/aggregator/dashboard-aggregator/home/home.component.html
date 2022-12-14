@@ -1,0 +1,160 @@
+<div class="row11">
+  <div class="topThings" style="display: flex">
+    <span class="ins">Dashboard</span>
+    <div class="dropdown">
+      <button
+        class="btn3"
+        mat-flat-button
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <img class="high3" src="assets/dropdown/Group.svg" />
+        <span class="middle33"> Options </span>
+        <img class="high4" src="assets/dropdown/Vector 457.svg" />
+        <img class="high5" src="assets/dropdown/Vector 15.svg" />
+      </button>
+    </div>
+  </div>
+
+  <!-- upper dashboard -->
+  <div class="all">
+    <span class="head">Overview</span>
+    <div class="card-header" style="display: flex">
+      <mat-card class="example-card">
+        <span class="topMsg"> Active Sellers </span><br />
+        <img class="image-top" src="assets/cards/active.svg" />
+        <span class="bottom"> 27 </span>
+      </mat-card>
+      <mat-card class="example-card">
+        <span class="topMsg"> Product Searches </span><br />
+        <img class="image-top1" src="assets/cards/search.svg" />
+        <span class="bottomMsg"> 523 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg"> Total Buyer Apps </span><br />
+        <img class="image-top2" src="assets/cards/cart.svg" />
+        <span class="bottomNum"> 22 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg"> Orders placed vs initiated </span><br />
+        <img class="load" src="assets/cards/Ellipse.svg" />
+        <img class="lo" src="assets/remainBlue.svg" />
+
+        <span class="bottomMsg21">
+          <img src="assets/cards/blue.svg" />
+          ORDERS PLACED
+          <br />
+          <span class="numbers">17</span>
+        </span>
+        <span class="bottomMsg2">
+          <img src="assets/cards/black.svg" />
+          ORDERS INITIATED
+          <br />
+          <span class="number">72</span>
+        </span>
+      </mat-card>
+    </div>
+  </div>
+
+  <!-- product listing -->
+  <div class="grid1" style="display: flex">
+    <div class="tableHead">
+      <span class="table-head">RECENT/OPEN ORDER</span>
+      <span class="day"
+        >Today <img class="vector" src="assets/Vector 8.svg" />
+      </span>
+      <div class="grid" style="display: flex" *ngIf="ProductData.length > 0">
+        <table mat-table [dataSource]="ProductData">
+          <ng-container matColumnDef="orderid">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">ORDERS ID </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo">{{ element.orderId }}</span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="createdAt">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">DATE & TIME </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo2"
+                >{{ element.createdAt | date : "short" }}
+              </span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="app">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">APP </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo2">PayTM</span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="items">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">ITEM(S) </span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo2">{{ element.items }}</span>
+            </td>
+          </ng-container>
+
+          <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">TOTAL AMOUNT</span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo2">{{ element.total }}</span>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">STATUS</span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo3">{{ element.status }}</span>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="merchant">
+            <th mat-header-cell *matHeaderCellDef>
+              <span class="tableTitle">MERCHANT</span>
+            </th>
+            <td mat-cell *matCellDef="let element">
+              <span class="proInfo2">{{ element.merchant }}</span>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="card-header-top">
+      <mat-card class="example-card-top">
+        <span class="topMsg1"> TOP BUYER APPS </span><br />
+        <img class="pic" src="assets/top-card/store.svg" />
+        <span class="name">My Store</span>
+        <span class="order">50 Orders</span>
+        <br />
+        <img class="pic" src="assets/top-card/paytm.svg" />
+        <span class="name">PayTM</span>
+        <span class="order1">50 Orders</span>
+        <br />
+        <img class="pic" src="assets/top-card/idfc.svg" />
+        <span class="name">IDFC</span>
+        <span class="order2">50 Orders</span>
+        <br />
+        <img class="pic" src="assets/top-card/kotak.svg" />
+        <span class="name">Kotak</span>
+        <span class="order3">50 Orders</span>
+      </mat-card>
+    </div>
+  </div>
+</div>

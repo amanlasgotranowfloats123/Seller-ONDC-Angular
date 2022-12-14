@@ -1,0 +1,177 @@
+<div class="top-sec" style="display: flex">
+  <img
+    class="arrow1"
+    style="cursor: pointer"
+    routerLink="/dashboard/stock"
+    src="assets/left-arrow.svg"
+  />
+  <div class="title-text">Add Product</div>
+  <div class="cancelBtn">Cancel</div>
+  <div style="height: 50px">
+    <button class="btn1" mat-flat-button>
+      <div class="buttonA" routerLink="/dashboard/stock"
+      (click)="setValue(xyz)">Save Product</div>
+    </button>
+  </div>
+</div>
+
+<div class="mainForm">
+  <div class="cus-inpt">
+    <label>General Details</label>
+  </div>
+  <form [formGroup]="productForm">
+    <div class="cus-inpt">
+      <span class="fontsA">Name *</span>
+      <input formControlName="name" type="text" />
+    </div>
+
+    <div class="cus-inpt">
+      <span class="fontsA">Category *</span>
+      <select formControlName="category" class="dropDown">
+        <option>Headphones</option>
+        <option>Mobile phone</option>
+      </select>
+    </div>
+    <div style="display: flex">
+      <div class="cus2-inpt">
+        <span class="fontsA">Selling Price *</span>
+
+        <input formControlName="sellingPrice" type="text" />
+      </div>
+
+      <div class="cus3-inpt">
+        <span class="fontsA">GST Percentage *</span>
+
+        <select formControlName="gst" class="dropDown">
+          <option>18%</option>
+          <option>Option 1</option>
+        </select>
+      </div>
+    </div>
+
+    <div style="display: flex">
+      <div class="cus2-inpt">
+        <span class="fontsA">Discounted Price</span>
+
+        <input formControlName="discountedPrice" type="text" />
+      </div>
+
+      <div class="cus3-inpt">
+        <span class="fontsA">Discount % </span>
+
+        <input formControlName="discountPercentage" type="text" />
+      </div>
+    </div>
+
+    <div style="display: flex">
+      <div class="cus2-inpt">
+        <span class="fontsA">Stock Quantity *</span>
+
+        <input formControlName="stockQuantity" type="text" />
+      </div>
+
+      <div class="cus3-inpt">
+        <span class="fontsA">Units</span>
+
+        <select formControlName="unit" class="dropDown">
+          <option>Pcs</option>
+          <option>Option 1</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="cus-inpt">
+      <span class="fontsA">Type *</span>
+      <br />
+      <mat-radio-group aria-label="Select an option">
+        <mat-radio-button class="radio" value="Veg">Veg</mat-radio-button>
+        <mat-radio-button class="radio" value="Non-Veg"
+          >Non-Veg</mat-radio-button
+        >
+      </mat-radio-group>
+    </div>
+
+    <div class="box-area">
+      <div class="cus-inpt">
+        <label>Image</label>
+        <div style="display: flex">
+          <div class="box cus-box">
+            <div class="box">
+              <input
+                class="box"
+                type="file"
+                id="fileInput"
+                name="fileInput"
+                accept="image/*"
+                (change)="selectFiles($event, 'not')"
+              />
+
+              <div class="box-text" style="z-index: 1">
+                <div>Add Image</div>
+              </div>
+            </div>
+          </div>
+
+          <div *ngFor="let preview of previews">
+            <div class="box cus-box" *ngIf="preview">
+              <img [src]="preview" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <mat-expansion-panel
+      (opened)="panelOpenState = true"
+      (closed)="panelOpenState = false"
+    >
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <div style="margin-left: -18px" class="cus-inpt">
+            <label> Additional Details</label>
+          </div>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <div class="cus-inpt">
+        <label>VARIENTS</label>
+      </div>
+
+      <div style="display: flex">
+        <div class="cus8-inpt">
+          <select class="dropDown">
+            <option>Color</option>
+            <option>Option 1</option>
+          </select>
+        </div>
+        <div class="cus7-inpt">
+          <input value="Black" type="text" />
+        </div>
+      </div>
+
+      <div style="display: flex">
+        <div class="cus8-inpt">
+          <select style="color: #848484" class="dropDown">
+            <option>Example:Black</option>
+            <option>Option 1</option>
+          </select>
+        </div>
+        <div class="cus7-inpt">
+          <input style="color: #848484" value="Black" type="text" />
+        </div>
+      </div>
+    </mat-expansion-panel>
+  </form>
+</div>
+
+<div style="display: flex">
+  <button class="btnFirst" mat-flat-button>Cancel</button>
+  <button
+    class="btnSecond"
+    mat-flat-button
+    routerLink="/dashboard/stock"
+    (click)="setValue(xyz)"
+  >
+    Save Product
+  </button>
+</div>

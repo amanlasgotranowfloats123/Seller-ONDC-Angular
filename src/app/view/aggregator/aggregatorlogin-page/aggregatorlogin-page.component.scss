@@ -1,0 +1,200 @@
+.login {
+  margin-top: 117px;
+  margin-left: 100px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 41px;
+  /* identical to box height */
+
+  color: #333333;
+}
+.pleaseEnter {
+  margin-top: 10px;
+  margin-left: 101px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 142.1%;
+  /* identical to box height, or 23px */
+
+  color: #4f4f4f;
+}
+.mobileNumber {
+  margin-top: 22px;
+  margin-left: 100px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.mobileInput {
+  margin-left: 100px;
+  background: #ffffff;
+  border: 0.8px solid #959595;
+  border-radius: 15px;
+  width: 360px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #000000;
+}
+.enterOTP {
+  margin-top: 29px;
+  margin-left: 100px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.keepMe {
+  margin-top: 33px;
+  margin-left: 11px;
+}
+.checkBoxStyle {
+  display: flex;
+  margin-left: 100px;
+}
+.marginCheckbox {
+  margin-top: 25px;
+  border: #4b70f1;
+}
+.byContinuin {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  /* identical to box height, or 100% */
+
+  color: #686868;
+  margin-left: 100px;
+}
+.verifOTP {
+  background: #c4c4c4;
+  border-radius: 25px;
+  width: 360px;
+  height: 48px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.verifyButton {
+  margin-top: 22px;
+  margin-left: 100px;
+}
+.input-box {
+  margin-left: 100px;
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 48px;
+  background: #fff;
+  border: 0.8px solid #959595;
+  border-radius: 15px;
+  padding-left: 0.5rem;
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.input-box .prefix {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+
+  color: #000000;
+  margin-left: 18px;
+}
+
+.input-box .suffix {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #868686;
+  margin-right: 20px;
+}
+
+.input-box input {
+  flex-grow: 1;
+  font-size: 20px;
+  background: #fff;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+.input-box:focus-within {
+  border-color: #777;
+}
+
+.error-text {
+  margin-left: 100px;
+  margin-top: 20px;
+  color: red;
+}
+.error-box {
+  border: 0.8px solid red;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+}
+
+ngb-carousel .wrapper {
+  position: relative;
+  height: 100vh;
+  width: auto;
+}
+ngb-carousel .wrapper img {
+  // height: 100vh;
+  // width: auto;
+  height: auto;
+  width: -webkit-fill-available;
+}
+
+ngb-carousel .wrapper > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.carousel-container {
+  height: -webkit-fill-available !important;
+}
+
+.company-logo {
+  width: 120px;
+  height: 67px;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+}
+
+.banner {
+  width: inherit;
+  height: 100vh;
+}

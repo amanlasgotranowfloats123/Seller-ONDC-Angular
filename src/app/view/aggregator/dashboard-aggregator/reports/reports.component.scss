@@ -1,0 +1,163 @@
+.title-text {
+  margin-left: 36px;
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333333;
+  position: relative;
+  bottom: 7px;
+  height: 47px;
+}
+.top-sec {
+  margin-top: 20px;
+}
+.mainForm{
+  margin-left: auto !important;
+    margin-right: auto !important;
+    width: 731px;
+    background: #FFFFFF;
+    border-radius: 4px;
+    margin: 50px 160px 50px 160px;
+    padding-bottom: 17px;
+}
+
+
+.cus-inpt {
+  padding: 24px 40px 24px 40px;
+  display: grid;
+
+  label {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #525252;
+      padding-bottom: 8px;
+  }
+
+  input[type=text] {
+      border: 0.3px solid #848484;
+      border-radius: 4px;
+      height: 48px;
+  }
+}
+
+
+
+.dropDown {
+  border: 0.3px solid #848484;
+  border-radius: 4px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #2b2b2b;
+}
+
+
+span.fontsA {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #525252;
+  padding-bottom: 4px;
+}
+
+
+button.btnFirst {
+  box-sizing: border-box;
+  /* position: absolute; */
+  height: 50px;
+  /* left: 41.25%; */
+  /* right: 43%; */
+  /* top: 1514px; */
+  border: 1px solid #4B70F1;
+  border-radius: 25px;
+  width: 194px;
+  margin-left: 274px;
+  margin-bottom: 14px;
+  margin-top: 88px;
+  background: #ffffff;
+  color:#4B70F1 ;
+}
+
+button.btnSecond {
+  height: 50px;
+
+  background: #4B70F1;
+  border-radius: 25px;
+  color: #ffffff;
+  width: 194px;
+  border-color: #4B70F1;
+  margin-left: 25px;
+  margin-top: 88px;
+}
+
+.cus-inpt1 {
+  padding: 24px 0px 24px 40px;
+  display: grid;
+  width: 365px;
+
+  label {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #525252;
+      padding-bottom: 8px;
+  }
+
+  input[type=text] {
+      border: 0.3px solid #848484;
+      border-radius: 4px;
+      height: 48px;
+  }
+}
+
+.cus-inpt2 {
+  padding: 24px 40px 24px 10px;
+  display: grid;
+  width: 359px;
+  margin-top: 23px;
+
+  label {
+      font-family: 'Open Sans';
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 20px;
+      color: #525252;
+      padding-bottom: 8px;
+  }
+
+  input[type=text] {
+      border: 0.3px solid #848484;
+      border-radius: 4px;
+      height: 48px;
+  }
+}
+
+
+
+ label.report{
+
+
+font-family: 'Open Sans' !important;
+font-style: normal !important;
+font-weight: 600 !important;
+font-size: 18px !important;
+line-height: 25px !important;
+/* identical to box height */
+
+
+color: #4A4A4A !important;
+}

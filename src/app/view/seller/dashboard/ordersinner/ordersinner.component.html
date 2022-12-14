@@ -1,0 +1,182 @@
+<div class="OrderDiv" style="height: auto">
+  <div class="top-order" style="display: flex">
+    <img
+      class="orderPic"
+      style="cursor: pointer"
+      routerLink="/dashboard/orders"
+      src="assets/left-arrow.svg"
+    />
+    <div class="title-text">Orders #885458584</div>
+  </div>
+
+  <div class="mainDiv">
+    <div class="left">
+      <div class="order-details-container">
+        <div class="title-container">
+          <span class="title">Order Details</span>
+        </div>
+        <div class="content child">
+          <div class="sub-container left-box">
+            <div class="time-and-date">
+              <span class="sub-heading"> Time & date </span>
+              <span class="value">3:00 PM, 20 Aug</span>
+            </div>
+
+            <div class="payment-status">
+              <span class="sub-heading"> Payment status</span>
+              <div
+                class="grid"
+                style="
+                  grid-template-columns: 0.2fr 1fr !important;
+                  align-items: center;
+                  padding-left: 10px;
+                "
+              >
+                <i class="fas fa-circle" style="color: green"></i>
+                <span class="value" style="padding: 0px !important">Paid</span>
+              </div>
+            </div>
+          </div>
+          <div class="sub-container grid">
+            <span class="sub-heading"> Status </span>
+            <mat-form-field appearance="fill" class="mat-select-custom">
+              <mat-label> </mat-label>
+              <mat-select>
+                <mat-option
+                  *ngFor="let status of statuses"
+                  [value]="status.value"
+                >
+                  <!-- <mat-icon>keyboard_arrow_down</mat-icon> -->
+                  <i class="fas fa-truck-moving"></i>
+                  <span class="value" [ngStyle]="{ color: status.color }">
+                    {{ status.viewValue }}</span
+                  >
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+
+      <div class="delivery-details-container child">
+        <div class="title-container">
+          <span class="title">Delivery Details</span>
+        </div>
+        <div class="content child">
+          <div class="sub-container grid">
+            <span class="sub-heading"> Delivery Address </span>
+            <span class="value"
+              >B-1/20-C, Near Punjab National Bank, Paschim Vihar, New Delhi,
+              Delhi 110063</span
+            >
+          </div>
+          <div class="sub-container grid">
+            <span class="sub-heading"> Delivery Mode </span>
+            <span class="value">Self Delivery</span>
+          </div>
+        </div>
+      </div>
+      <div class="customer-details-container">
+        <div class="title-container">
+          <span class="title">Customer Details</span>
+        </div>
+        <div class="content child">
+          <div class="sub-container grid">
+            <span class="sub-heading"> Name </span>
+            <span class="value">Swaminarayanan Namboothiri</span>
+          </div>
+          <div class="sub-container grid">
+            <span class="sub-heading"> Mobile </span>
+            <span class="value">+91 9823475876</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="order-summary-container child">
+        <div class="title-container">
+          <span class="title">Order Summary</span>
+        </div>
+
+        <div class="item-list">
+          <div class="item" *ngFor="let item of items">
+            <div>
+              <img src="{{ item.img }}" alt="" />
+              <div class="grid info">
+                <span>{{ item.name }}</span>
+                <span>{{ item.stock }}</span>
+              </div>
+            </div>
+            <div class="info">
+              <span>x{{ item.qty }}</span>
+              <span></span>
+            </div>
+            <div class="info">
+              <span>{{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="subtotal-container child">
+        <div class="content child" style="grid-template-columns: none">
+          <div style="display: grid; grid-template-columns: auto 0.65fr 0.5fr">
+            <span class="value" style="font-weight: 600 !important"
+              >Subtotal</span
+            >
+            <span></span>
+            <span class="value" style="font-weight: 600 !important"
+              >15,000</span
+            >
+          </div>
+          <div style="display: grid; grid-template-columns: auto 0.65fr 0.5fr">
+            <span class="value" style="font-weight: 600 !important">Taxes</span>
+            <span></span>
+            <span></span>
+          </div>
+          <div style="display: grid; grid-template-columns: auto 0.65fr 0.5fr">
+            <span class="value" style="font-weight: 400 !important"
+              >CGST @9%</span
+            >
+            <span></span>
+            <span class="value" style="font-weight: 400 !important">₹30</span>
+          </div>
+          <div style="display: grid; grid-template-columns: auto 0.65fr 0.5fr">
+            <span class="value" style="font-weight: 400 !important"
+              >SGST @9%</span
+            >
+            <span></span>
+            <span class="value" style="font-weight: 400 !important">₹30</span>
+          </div>
+        </div>
+      </div>
+      <div class="total-container">
+        <div></div>
+        <div style="display: grid; grid-template-columns: auto 0.65fr 0.5fr">
+          <span class="title" style="font-weight: 700; font-size: 18px">
+            Total
+          </span>
+          <span></span>
+          <span class="title" style="font-weight: 700; font-size: 18px">
+            ₹15,060
+          </span>
+        </div>
+
+        <div
+          class="content child"
+          style="display: grid; grid-template-columns: auto; align-items: end"
+        >
+          <div class="ondc-settlements">
+            <div class="img">
+              <img src="assets/ondc_logo.svg" alt="" />
+            </div>
+            <div class="txt">
+              <span>View Settlement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

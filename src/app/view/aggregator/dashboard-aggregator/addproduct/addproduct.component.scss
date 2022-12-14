@@ -1,0 +1,276 @@
+img.arrow1 {
+  width: 20.8px;
+  height: 18.91px;
+}
+.top-sec {
+  margin-top: 20px;
+}
+img.arrow1 {
+  margin-left: 30px;
+}
+
+.title-text {
+  margin-left: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  color: #333333;
+  position: relative;
+  bottom: 7px;
+  height: 47px;
+}
+
+button.btn1 {
+  background: #4b70f1;
+  border-radius: 25px;
+  height: 50px;
+  width: 206px;
+  border-color: #4b70f1;
+  margin-left: 29px;
+  position: relative;
+}
+
+.buttonA {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: #ffffff;
+}
+
+.cancelBtn {
+  margin-left: 745px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+  height: 47px;
+  color: #5d5d5a;
+}
+
+.mainForm {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 731px;
+  background: #ffffff;
+  border-radius: 4px;
+  // margin: 50px 160px 50px 160px;
+  padding-bottom: 17px;
+  display: grid;
+  justify-items: stretch;
+}
+
+.form-inner-btn-grp {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  margin: 20px 0;
+}
+
+.error-grp {
+  color: red !important;
+  margin-top: 10px;
+  font-size: 14px;
+}
+.cus-inpt {
+  padding: 24px 40px 24px 40px;
+  display: grid;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+    padding-bottom: 8px;
+  }
+
+  input[type="text"] {
+    border: 0.3px solid #848484;
+    border-radius: 4px;
+    height: 48px;
+  }
+}
+
+.dropDown {
+  border: 0.3px solid #848484;
+  border-radius: 4px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #2b2b2b;
+}
+
+.cus2-inpt {
+  padding: 24px 24px 24px 40px;
+  display: grid;
+  width: 32rem;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+    padding-bottom: 8px;
+  }
+
+  input[type="text"] {
+    border: 0.3px solid #848484;
+    border-radius: 4px;
+    height: 48px;
+  }
+}
+
+.cus3-inpt {
+  padding: 24px 40px 24px 0px;
+  display: grid;
+  width: 17rem;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+    padding-bottom: 8px;
+  }
+
+  input[type="text"] {
+    border: 0.3px solid #848484;
+    border-radius: 4px;
+    height: 48px;
+  }
+}
+
+select option {
+  border: 0.3px solid #848484;
+  border-radius: 4px;
+  height: 48px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height */
+  color: #2b2b2b;
+}
+
+.cus-box {
+  margin-right: 15px;
+}
+
+.box {
+  background: #edf0f3;
+  border-radius: 8px;
+  width: 119px;
+  height: 119px;
+
+  .box-text {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #000000;
+    padding: 41px 33px 40px 32px;
+  }
+}
+
+::ng-deep .mat-expansion-panel-header {
+  background: #edf0f3;
+  height: 91px;
+}
+
+.cus8-inpt {
+  padding: 0px 40px 24px 40px;
+  display: grid;
+  width: 276px;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+    padding-bottom: 8px;
+  }
+
+  input[type="text"] {
+    border: 0.3px solid #848484;
+    border-radius: 4px;
+    height: 48px;
+  }
+}
+
+.cus7-inpt {
+  padding: 0px 40px 24px 0px;
+  display: grid;
+  width: 452px;
+
+  label {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    color: #525252;
+    padding-bottom: 8px;
+  }
+
+  input[type="text"] {
+    border: 0.3px solid #848484;
+    border-radius: 4px;
+    height: 48px;
+  }
+}
+
+span.fontsA {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #525252;
+  padding-bottom: 4px;
+}
+
+button.btnFirst {
+  box-sizing: border-box;
+  /* position: absolute; */
+  height: 46px;
+  /* left: 41.25%; */
+  /* right: 43%; */
+  /* top: 1514px; */
+  border: 1px solid #c4c4c4;
+  border-radius: 25px;
+  width: 242px;
+}
+
+button.btnSecond {
+  height: 45px;
+  left: 59.12%;
+  right: 25.12%;
+  top: 1514px;
+  background: #4b70f1;
+  border-radius: 25px;
+  color: #ffffff;
+  width: 242px;
+  border-color: #4b70f1;
+  margin-left: 52px;
+}

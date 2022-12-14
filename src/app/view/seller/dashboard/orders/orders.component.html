@@ -1,0 +1,145 @@
+<div class="row">
+  <div class="header">
+    <span class="top-name">Usage Insights</span>
+    <span class="top-head">Today</span>
+    <img class="picture" src="assets/Vector 8.svg" />
+    <br />
+
+    <div class="card-head" style="display: flex">
+      <mat-card class="example-card">
+        <span class="card-top"> Orders Initiated </span><br />
+        <span class="side-card"> 134 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="card-top"> Orders Recieved </span><br />
+        <span class="side-card"> 241 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="card-top"> Order Value </span><br />
+        <span class="side-card1"> ₹ 1,23,456 </span>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="top-heading">
+    <span class="side-heading"> Orders </span>
+    <span class="side-head-number"> ({{ num }}) </span>
+
+    <button class="btn2" mat-flat-button>
+      <img class="high2" src="assets/Group 3479.svg" />
+      <span class="middle32"> Filter </span>
+    </button>
+
+    <button class="btn3" mat-flat-button>
+      <img class="high3" src="assets/Group.svg" />
+      <span class="middle33"> Options </span>
+      <img class="high4" src="assets/Vector 457.svg" />
+      <img class="high5" src="assets/Vector 15 (1).svg" />
+    </button>
+  </div>
+
+  <div class="grid">
+    <table mat-table [dataSource]="dataSource">
+      <input type="checkbox" class="marginCheckbox" />
+
+      <ng-container matColumnDef="check">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">
+            <input type="checkbox" class="marginCheckbox" />
+          </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <input type="checkbox" class="marginCheckbox" />
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="orderId">
+        <th mat-header-cell *matHeaderCellDef>
+          <span style="margin-left: 1rem" class="tableTitle">ORDER ID </span>
+        </th>
+        <td
+          style="cursor: pointer"
+          mat-cell
+          *matCellDef="let element"
+          routerLink="/dashboard/ordersinner"
+        >
+          <span class="proInfo">{{ element.orderId }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="datetime">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">Date & Time</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2"
+            >{{ element.datetime }}<br /><span
+              style="font-size: 12px; color: #80807f"
+              >14:23</span
+            ></span
+          >
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="items">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">ITEMS </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.items }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="customer">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">CUSTOMER</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.customer }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">AMOUNT</span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.amount }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="status">
+        <th class="statusth" mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">STATUS</span>
+        </th>
+
+        <td class="statustd" mat-cell *matCellDef="let element">
+          <mat-form-field
+            appearance="fill"
+            class="mat-select-custom"
+            style="cursor: pointer"
+          >
+            <mat-label> </mat-label>
+            <mat-select>
+              <mat-option
+                *ngFor="let status of statuses"
+                [value]="status.value"
+              >
+                <img [src]="status.src" />
+
+                <span class="value" [ngStyle]="{ color: status.color }">
+                  {{ status.viewValue }}</span
+                >
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>

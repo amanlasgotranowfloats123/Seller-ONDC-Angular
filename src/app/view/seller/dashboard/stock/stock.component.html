@@ -1,0 +1,177 @@
+<div class="stockDiv" style="height: 750px">
+  <div class="topThings">
+    <span class="ins">Insights</span>
+    <span class="td">Today</span>
+    <img class="arr" src="assets/Vector 8.svg" />
+    <br />
+
+    <div class="all" style="display: flex">
+      <mat-card class="example-card">
+        <span class="topMsg"> Stock </span><br />
+        <span class="bottomMsg"> 134 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg"> SKU </span><br />
+        <span class="bottomMsg"> 243 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg">
+          PRODUCT<br />
+          SEARCHES </span
+        ><br />
+        <span class="bottomMsg2"> 723 </span>
+      </mat-card>
+
+      <mat-card class="example-card">
+        <span class="topMsg">
+          TOTAL<br />
+          BUYERS APP </span
+        ><br />
+        <span class="bottomMsg2"> 271 </span>
+      </mat-card>
+    </div>
+  </div>
+
+  <div class="middle">
+    <span class="middle1"> All Products </span>
+    <span class="middle2"> ({{ num }}) </span>
+
+    <div class="dropdown">
+      <button
+        class="btn1"
+        type="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+        mat-flat-button
+      >
+        <span class="middle31"> Add Product </span>
+        <img src="assets/Vector 457.png" />
+        <img class="highA" src="assets/Vector 15 (2).svg" />
+      </button>
+      <ul class="dropdown-menu">
+        <li style="cursor: pointer" routerLink="/dashboard/addproduct/id">
+          <a class="dropdown-item"
+            ><img
+              style="margin-right: 1rem"
+              class="imgAdd"
+              src="assets/Group 5362.svg"
+            />
+            <span class="ADrop">Add Manually</span></a
+          >
+        </li>
+        <li style="cursor: pointer">
+          <a class="dropdown-item">
+            <img
+              style="margin-right: 1rem"
+              class="imgAdd"
+              src="assets/Group 772542992.svg"
+            /><span class="BDrop">Bulk Add by CSV</span></a
+          >
+        </li>
+      </ul>
+    </div>
+
+    <button class="btn2" mat-flat-button>
+      <img class="high2" src="assets/Group 3479.svg" />
+      <span class="middle32"> Filter </span>
+    </button>
+
+    <button class="btn3" mat-flat-button>
+      <img class="high3" src="assets/Group.svg" />
+      <span class="middle33"> Options </span>
+      <img class="high4" src="assets/Vector 457.svg" />
+      <img class="high5" src="assets/Vector 15 (1).svg" />
+    </button>
+  </div>
+
+  <br />
+  <div class="grid">
+    <table mat-table [dataSource]="dataSource">
+      <input type="checkbox" class="marginCheckbox" />
+
+      <ng-container matColumnDef="check">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">
+            <input type="checkbox" class="marginCheckbox" />
+          </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <input type="checkbox" class="marginCheckbox" />
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>
+          <span style="margin-left: 1rem" class="tableTitle">Product </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <img class="stockImage" src="assets/stockImage.svg">
+          <span class="proInfo">{{ element.name }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">Category </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.category }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="sellingPrice">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">Selling Price </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2"> Rs {{ element.sellingPrice }}</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="stockQuantity">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">Stock Qty </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <span class="proInfo2">{{ element.stockQuantity }} Pc</span>
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef>
+          <span class="tableTitle">Action </span>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <div class="dropdown">
+            <img
+              class="act"
+              src="assets/Group 6265157.svg"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            />
+            <ul class="dropdown-menu">
+              <li routerLink="/dashboard/addproduct/{{ element.id }}">
+                <a class="dropdown-item"
+                  ><img class="ActionImg" src="assets/Vector (3).svg" /> Edit</a
+                >
+              </li>
+              <li (click)="deleteProd(element.id)">
+                <a class="dropdown-item"
+                  ><img
+                    class="ActionImg"
+                    src="assets/Vector (4).svg"
+                  />Delete</a
+                >
+              </li>
+            </ul>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  </div>
+</div>
